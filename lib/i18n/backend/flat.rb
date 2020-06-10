@@ -2,7 +2,7 @@ require 'i18n'
 
 module I18n
   module Backend
-    class Flat < Simple
+    class Flat < SimpleDelegator
       def store_translations(key, translations, options = {})
         keys = key.split('.')
 

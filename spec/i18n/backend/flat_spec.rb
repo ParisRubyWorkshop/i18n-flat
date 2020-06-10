@@ -5,7 +5,7 @@ RSpec.describe I18n::Backend::Flat do
   end
 
   describe "simple backend translate: given true as a key" do
-    let(:backend) { I18n.backend = I18n::Backend::Flat.new }
+    let(:backend) { I18n.backend = I18n::Backend::Flat.new(I18n::Backend::Simple.new) }
 
     it 'stores correctly a flat translation' do
       backend.store_translations(
